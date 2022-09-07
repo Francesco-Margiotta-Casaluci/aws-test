@@ -204,7 +204,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/test-aws/dev/1662535155550-2022-09-07T07:19:15.550Z/test-aws.zip"
+                "S3Key": "serverless/test-aws/dev/1662540007146-2022-09-07T08:40:07.146Z/test-aws.zip"
               },
               "Handler": "wsgi_handler.handler",
               "Runtime": "python3.8",
@@ -227,14 +227,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionk2SuroPUX1jGolHf0foLzVkEIt5G06Gn7pxRNqek": {
+          "ApiLambdaVersionP0k9hpfeMACqf6PcStvN23Yd6wZQwmiHjQeJ8ZQkPXw": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "QdplDvNJ/lybAYR2JZO76BwdOV/IUf6eBw+qduHRQz4="
+              "CodeSha256": "+8BSYcrF4zhQcMcsHIMocU2e2EGE6jwiCg+hQfjEqAw="
             }
           },
           "HttpApi": {
@@ -363,7 +363,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionk2SuroPUX1jGolHf0foLzVkEIt5G06Gn7pxRNqek"
+              "Ref": "ApiLambdaVersionP0k9hpfeMACqf6PcStvN23Yd6wZQwmiHjQeJ8ZQkPXw"
             },
             "Export": {
               "Name": "sls-test-aws-dev-ApiLambdaFunctionQualifiedArn"
@@ -515,7 +515,7 @@
         "timeout": 6,
         "runtime": "python3.8",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionk2SuroPUX1jGolHf0foLzVkEIt5G06Gn7pxRNqek"
+        "versionLogicalId": "ApiLambdaVersionP0k9hpfeMACqf6PcStvN23Yd6wZQwmiHjQeJ8ZQkPXw"
       }
     },
     "resources": {
@@ -571,7 +571,7 @@
     "artifact": "/home/francesco/Develop/test-aws/.serverless/test-aws.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/test-aws/dev/1662535155550-2022-09-07T07:19:15.550Z",
+    "artifactDirectoryName": "serverless/test-aws/dev/1662540007146-2022-09-07T08:40:07.146Z",
     "artifact": "test-aws.zip"
   }
 }

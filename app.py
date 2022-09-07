@@ -27,12 +27,13 @@ def get_user(user_id):
         return jsonify({'error': 'Utente con ID {} non trovato '.format(user_id)}), 404
 
     return jsonify(
-        {'userId': item.get('userId').get('S'), 'name': item.get('name').get('S')}
-    )
+        {'userId': item.get('userId').get('S'), 'username': item.get('username').get('S'), 'password':item.get('password').get('S')}
+    ),200
 
 
 @app.route('/createUser', methods=['POST'])
 def create_user():
+    print(request.json)
     user_id = request.json.get('userId')
     name = request.json.get('username')
     password = request.json.get('password')
@@ -40,7 +41,7 @@ def create_user():
         return jsonify({'Errore': '"userId", "username" e "password" richiesti'}), 400
 
     dynamodb_client.put_item(
-        TableName=USERS_TABLE, Item={'userId': {'S': user_id}, 'username': {'S': name}, 'password':{'S':password}}
+        TableName=USERS_TABLE, Item={'userId': {'S': str(user_id)}, 'username': {'S': name}, 'password':{'S':password}}
     )
 
     return jsonify({'userId': user_id}),201
